@@ -51,11 +51,27 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
+Hi {}, my name is {aiko hamasaki}! I am an Anime themed group management bot.
+Build by weebs for weebs, I specialize in managing anime and similar themed groups.
+You can find my list of available commands with /help.
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
+Hey there! My name is *{aiko hamasaki}Hey there! My name is Aiko Hamasaki.
+I'm a Hero For Fun and help admins manage their groups with One Punch! Have a look at the following for an idea of some of the things I can help you with.
+
+Main commands available:
+ • /help: PM's you this message.
+ • /help <module name>: PM's you info about that module.
+ • /settings:
+   • in PM: will send you your settings for all supported modules.
+   • in a group: will redirect you to pm, with all that chat's settings.
+
+
+
+All commands can either be used with / or !.
+
+And the following:*.
 
 *Main* commands available:
  • /help: PM's you this message.
@@ -71,7 +87,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://raw.githubusercontent.com/0xManjeet/SaitamaRobot/master/index.png"
+SAITAMA_IMG = "https://telegra.ph/file/36bb94d1591cb70cef5c1.jpg"
 
 DONATE_STRING = """SUI"""
 
@@ -191,7 +207,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="☑️ Add me to your group",
+                            text="🌸 Add me to your group 🌸",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
